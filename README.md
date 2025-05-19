@@ -1,78 +1,98 @@
-# Official components for Angular
-[![npm version](https://badge.fury.io/js/%40angular%2Fcdk.svg)](https://www.npmjs.com/package/@angular/cdk)
-[![Build status](https://circleci.com/gh/angular/components.svg?style=svg)](https://circleci.com/gh/angular/components)
-[![Gitter](https://badges.gitter.im/angular/components.svg)](https://gitter.im/angular/material2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
 
-The Angular team builds and maintains both common UI components and tools to help you build your
-own custom components. The team maintains several npm packages.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-| Package                   | Description                                                                         | Docs             |
-| ------------------------- | ----------------------------------------------------------------------------------- | ---------------- |
-| `@angular/cdk`            | Library that helps you author custom UI components with common interaction patterns | [Docs][cdk-docs] |
-| `@angular/material`       | [Material Design][] UI components for Angular applications                          | [Docs][mat-docs] |
-| `@angular/google-maps`    | Angular components built on top of the [Google Maps JavaScript API][]               | [Docs][map-docs] |
-| `@angular/youtube-player` | Angular component built on top of the [YouTube Player API][]                        | [Docs][ytp-docs] |
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Description
 
-#### Quick links
-[Documentation, demos, and guides][mat-docs] |
-[Frequently Asked Questions](FAQ.md) |
-[Community Google group](https://groups.google.com/forum/#!forum/angular-material2) |
-[Contributing](https://github.com/angular/components/blob/main/CONTRIBUTING.md) |
-[StackBlitz Template](https://stackblitz.com/fork/components-issue)
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Getting started
+## Project setup
 
-See our [Getting Started Guide][getting-started] if you're building your first project with Angular
-Material.
+```bash
+$ npm install
+```
 
+## Compile and run the project
 
-## Contributing
+```bash
+# development
+$ npm run start
 
-If you'd like to contribute, please follow our [contributing guidelines][contributing]. Please see
-our [`help wanted`][help-wanted] label for a list of issues with good opportunities for
-contribution. You can also use the [`good first issue`][good-first-issue] label to find issues
-if you are just starting to contribute to the project.
+# watch mode
+$ npm run start:dev
 
-## About the team
-The Angular Components team is part of the Angular team at Google. The team includes both Google
-employees and community contributors from around the globe.
+# production mode
+$ npm run start:prod
+```
 
-Our team has two primary goals:
-* Build high-quality UI components that developers can drop into existing applications
-* Provide tools that help developers build their own custom components with common interaction
-patterns
+## Run tests
 
+```bash
+# unit tests
+$ npm run test
 
-What do we mean by "high-quality" components?
-* Internationalized and accessible so that all users can use them.
-* Straightforward APIs that don't confuse developers.
-* Behave as expected across a wide variety of use-cases without bugs.
-* Behavior is well-tested with both unit and integration tests.
-* Customizable within the bounds of the Material Design specification.
-* Performance cost is minimized.
-* Code is clean and well-documented to serve as an example for Angular developers.
+# e2e tests
+$ npm run test:e2e
 
-## Browser and screen reader support
-The Angular Components team supports the most recent two versions of all major browsers:
-Chrome (including Android), Firefox, Safari (including iOS), and  Edge.
+# test coverage
+$ npm run test:cov
+```
 
-We aim for great user experience with the following screen readers:
-* **Windows**: NVDA and JAWS with FF / Chrome.
-* **macOS**: VoiceOver with Safari / Chrome.
-* **iOS**: VoiceOver with Safari
-* **Android**: Android Accessibility Suite (formerly TalkBack) with Chrome.
-* **Chrome OS**: ChromeVox with Chrome.
+## Deployment
 
+When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
 
-[Material Design]: https://material.io
-[Google Maps JavaScript API]: https://developers.google.com/maps/documentation/javascript/tutorial
-[YouTube Player API]: https://developers.google.com/youtube/iframe_api_reference
-[cdk-docs]: https://material.angular.dev/cdk/categories
-[mat-docs]: https://material.angular.dev
-[map-docs]: https://github.com/angular/components/blob/main/src/google-maps/README.md
-[ytp-docs]: https://github.com/angular/components/blob/main/src/youtube-player/README.md
-[getting-started]: https://material.angular.dev/guide/getting-started
-[contributing]: https://github.com/angular/components/blob/main/CONTRIBUTING.md
-[help-wanted]: https://github.com/angular/components/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
-[good-first-issue]: https://github.com/angular/components/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+label%3A%22good+first+issue%22
+If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+
+```bash
+$ npm install -g @nestjs/mau
+$ mau deploy
+```
+
+With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+
+## Resources
+
+Check out a few resources that may come in handy when working with NestJS:
+
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
