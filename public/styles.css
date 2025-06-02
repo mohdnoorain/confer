@@ -8,3 +8,7 @@ body {
     height: 50vh;
     object-fit: contain;
 }
+
+#joinBtn {
+    padding: 20px;
+}
