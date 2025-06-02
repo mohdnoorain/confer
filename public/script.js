@@ -1,15 +1,6 @@
 
 const socket = io(location.href); // Replace with your local IP
-const iceServerConfig = {
-    iceServers: [
-        { urls: ["stun:bn-turn1.xirsys.com"] },
-        {
-            username: "K2i0P0uJ2RjU4q2oV0VCXYkuu3197Ltjq_qiiB2Gv_hPuXXTaGYjf5C55zPqgHMBAAAAAGg9J2Zub29yYWlubWRu",
-            credential: "6bebe5e6-3f69-11f0-b040-0242ac140004",
-            urls: ["turn:bn-turn1.xirsys.com:80?transport=udp", "turn:bn-turn1.xirsys.com:3478?transport=udp", "turn:bn-turn1.xirsys.com:80?transport=tcp", "turn:bn-turn1.xirsys.com:3478?transport=tcp", "turns:bn-turn1.xirsys.com:443?transport=tcp", "turns:bn-turn1.xirsys.com:5349?transport=tcp"]
-        }
-    ]
-}
+
 const localVideo = document.getElementById('localVideo');
 const remoteVideosContainer = document.getElementById('remoteVideosContainer');
 const joinBtn = document.getElementById('joinBtn');
@@ -56,7 +47,9 @@ socket.on('user-connected', (userId) => {
 
 // Receive offer and respond with answer
 socket.on('offer', async ({ sender, offer }) => {
-    const peer = new RTCPeerConnection(iceServerConfig);
+    const peer = new RTCPeerConnection({
+        iceServers: [{ urls: 'stun:stun.l.google.com:19302' }],
+    });
     peer.ontrack = (event) => {
         console.log(event.streams)
         addRemoteVideo(sender, event.streams[0]);
@@ -105,7 +98,9 @@ socket.on('ice-candidate', async ({ sender, candidate }) => {
 
 // Utility to create a peer connection
 function createPeer(socketId) {
-    const peer = new RTCPeerConnection(iceServerConfig);
+    const peer = new RTCPeerConnection({
+        iceServers: [{ urls: 'stun:stun.l.google.com:19302' }],
+    });
 
     peer.ontrack = (event) => {
         addRemoteVideo(socketId, event.streams[0]);
